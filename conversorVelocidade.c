@@ -11,6 +11,8 @@ void converterMphParaKmH(); //Função para converter mph para km/h
 int main(){
     int opcao; //Variável que armazena a escolha do usuário no menu
 
+    //Laço para manter o menu ativo até que o usuário saia ou escolha uma opção válida
+    do{
     //Exibe o menu principal do programa
     printf("==== Conversor de Velocidade ====\n");
     printf("1 - Converter de m/s para km/h\n"); //Opção 1: Converter de m/s para km/h
@@ -58,6 +60,7 @@ int main(){
             printf("Opcao invalida!\n\n");
 
     }
+    }while(opcao!=7);   //Repete até o usuário escolher a opção 7 (Sair)
 
     return 0; //Retorno padrão da função main indicando execução bem-sucedida
 }
@@ -74,7 +77,7 @@ void converterMsParaKmH(){
     kmh = ms * 3.6; 
 
     //Exibe o resultado da conversão
-    printf("Velocidade em km/h: %.2f\n", kmh); //Mostra o resultado com 2 casas decimais
+    printf("Velocidade em km/h: %.2f\n\n", kmh); //Mostra o resultado com 2 casas decimais
 }
 
 //Função para converter de quilômetros por hora (km/h) para metros por segundo (m/s)
@@ -89,7 +92,7 @@ void converterKmhParaMs(){
     ms = kmh / 3.6;
 
     //Exibe o resultado da conversão
-    printf("Velocidade em m/s: %.2f\n", ms); //Mostra o resultado com 2 casas decimais
+    printf("Velocidade em m/s: %.2f\n\n", ms); //Mostra o resultado com 2 casas decimais
 }
 
 //Função para converter de metros por segundo (m/s) para milhas por hora (mph)
@@ -104,7 +107,7 @@ void converterMsParaMph(){
     mph = ms * 2.237;
 
     //Exibe o resultado da conversão
-    printf("Velocidade em mph: %.2f\n", mph); //Mostra o resultado com 2 casas decimais
+    printf("Velocidade em mph: %.2f\n\n", mph); //Mostra o resultado com 2 casas decimais
 }
 
 //Função para converter de quilômetros por hora (km/h) para milhas por hora (mph)
@@ -119,7 +122,7 @@ void converterKmhParaMph(){
     mph = kmh / 1.609;
 
     //Exibe o resultado da conversão
-    printf("Velocidade em mph: %.2f\n", mph); //Mostra o resultado com 2 casas decimais
+    printf("Velocidade em mph: %.2f\n\n", mph); //Mostra o resultado com 2 casas decimais
 }
 
 //Função para converter de milhas por hora (mph) para metros por segundo (m/s)
@@ -134,7 +137,7 @@ void converterMphParaMs(){
     ms = mph * 0.44704;
 
     //Exibe o resultado da conversão
-    printf("Velocidade em m/s: %.2f\n", ms); //Mostra o resultado com 2 casas decimais
+    printf("Velocidade em m/s: %.2f\n\n", ms); //Mostra o resultado com 2 casas decimais
 }
 
 //Função para converter de milhas por hora (mph) para quilômetros por hora (km/h)
@@ -149,5 +152,5 @@ void converterMphParaKmH(){
     kmh = mph * 1.60934;
 
     //Exibe o resultado da conversão
-    printf("Velocidade em km/h: %.2f\n", kmh); //Mostra o resultado com 2 casas decimais
+    printf("Velocidade em km/h: %.2f\n\n", kmh); //Mostra o resultado com 2 casas decimais
 }
